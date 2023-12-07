@@ -39,26 +39,22 @@ Apache Airflow™ is an open-source platform for developing, scheduling, and mon
   - minikube start --vm-driver docker
   - minikube status
   
-  ```
-
-### Install Apache Airflow Using Helm chart 
-Reference - https://hungngph.medium.com/airflow-on-kubernetes-with-helm-c795545325dc
-![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/372c1599-698a-479b-8165-3384e5a3bec7)
-
-```
-   39  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-   40  sudo install minikube-linux-amd64 /usr/local/bin/minikube
-   41  minikube version
-   42  minikube status
-   43  minikube start --vm-driver docker
-   44  sudo chmod +777 ///var/run/docker.sock -R
-   45  minikube start --vm-driver docker >> To start the minikube with docker 
-   46  minikube status >> To check the minikube status
-   47 nano value.yaml  >> write value.yaml file for helm airflow installation
+  - curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  - sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  - minikube version
+  - minikube status
+  - minikube start --vm-driver docker
+  - sudo chmod +777 ///var/run/docker.sock -R
+  - minikube start --vm-driver docker >> To start the minikube with docker 
+  - minikube status >> To check the minikube status
+  - nano value.yaml  >> write value.yaml file for helm airflow installation
 
 Input below mentioned yamal script in value.yaml file
 ```
 ![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/5210a006-e44c-49c7-8174-b58ade21c44b)
+
+### Install Apache Airflow Using Helm chart 
+Reference - https://hungngph.medium.com/airflow-on-kubernetes-with-helm-c795545325dc
 ```
    48  kubectl create namespace airflow && kubectl config set-context --current --namespace=airflow
    49  helm upgrade --install airflow apache-airflow/airflow --namespace airflow --f values.yaml 
