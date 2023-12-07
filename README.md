@@ -7,7 +7,6 @@ Apache Airflow™ is an open-source platform for developing, scheduling, and mon
 - https://airflow.apache.org/docs/apache-airflow/stable/index.html
 - https://www.devopsschool.com/blog/what-is-apache-airflow-and-use-cases-of-apache-airflow/
 
-
 ### Required Tools 
 - Install python3
   ```
@@ -38,7 +37,6 @@ Apache Airflow™ is an open-source platform for developing, scheduling, and mon
   - kubectl version --client --output=yaml
   - minikube start --vm-driver docker
   - minikube status
-  
   - curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
   - sudo install minikube-linux-amd64 /usr/local/bin/minikube
   - minikube version
@@ -50,7 +48,7 @@ Apache Airflow™ is an open-source platform for developing, scheduling, and mon
   - nano value.yaml  >> write value.yaml file for helm airflow installation
 
 Input below mentioned yamal script in value.yaml file
-```
+
 ![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/5210a006-e44c-49c7-8174-b58ade21c44b)
 
 ### Install Apache Airflow Using Helm chart 
@@ -76,7 +74,8 @@ Output :-
 ![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/9d229490-e0f6-4257-8d2e-a8fa99b691a6)
 
 ### The web server can now be accessed on localhost:8080. The default credentials are username admin and password admin.
-Output :- 
+Output :-
+
 ![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/ec956be9-8cf5-43ff-a654-e31c8415024d)
 
 ![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/e8b24e1a-215a-4848-a6b3-486c3d07a0e1)
