@@ -55,6 +55,8 @@ Reference - https://hungngph.medium.com/airflow-on-kubernetes-with-helm-c7955453
    45  minikube start --vm-driver docker >> To start the minikube with docker 
    46  minikube status >> To check the minikube status
    47 nano value.yaml  >> write value.yaml file for helm airflow installation
+
+Input below mentioned yamal script in value.yaml file
 ```
 ![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/5210a006-e44c-49c7-8174-b58ade21c44b)
 ```
