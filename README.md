@@ -45,5 +45,48 @@ Apache Airflow™ is an open-source platform for developing, scheduling, and mon
 Reference - https://hungngph.medium.com/airflow-on-kubernetes-with-helm-c795545325dc
 ![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/372c1599-698a-479b-8165-3384e5a3bec7)
 
+```
+   39  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   40  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+   41  minikube version
+   42  minikube status
+   43  minikube start --vm-driver docker
+   44  sudo chmod +777 ///var/run/docker.sock -R
+   45  minikube start --vm-driver docker >> To start the minikube with docker 
+   46  minikube status >> To check the minikube status
+   47 nano value.yaml  >> write value.yaml file for helm airflow installation
+```
+![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/5210a006-e44c-49c7-8174-b58ade21c44b)
+```
+   48  kubectl create namespace airflow && kubectl config set-context --current --namespace=airflow
+   49  helm upgrade --install airflow apache-airflow/airflow --namespace airflow --f values.yaml 
+   50  helm upgrade --install airflow apache-airflow/airflow --namespace airflow -f values.yaml
+```
+Output :- 
+
+![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/53f52306-d5ae-424f-b5fc-92abed2bb161)
+
+### Check Airflow Webserver status on Minikube
+
+![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/da82694f-4b68-4817-9c67-fd5a3894e122)
+
+### Now, you can access Airflow UI by using kubectl port-forward:
+```
+kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow
+```
+Output :- 
+![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/9d229490-e0f6-4257-8d2e-a8fa99b691a6)
+
+### The web server can now be accessed on localhost:8080. The default credentials are username admin and password admin.
+Output :- 
+![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/ec956be9-8cf5-43ff-a654-e31c8415024d)
+
+![image](https://github.com/anand40090/Apache-Airflow/assets/32446706/e8b24e1a-215a-4848-a6b3-486c3d07a0e1)
+
+
+
+
+
+
 
 
