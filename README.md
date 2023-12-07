@@ -6,3 +6,16 @@ Apache Airflow™ is an open-source platform for developing, scheduling, and mon
 ### Usefull Links - 
 - https://airflow.apache.org/docs/apache-airflow/stable/index.html
 - 
+
+### Tools 
+- python3
+- Docker
+- Helm
+
+admin1@ubuntu:~/Desktop$ python3 -m venv env_airflow
+admin1@ubuntu:~/Desktop$ source env_airflow/bin/activate
+(env_airflow) admin1@ubuntu:~/Desktop$ 
+admin1@ubuntu:~/Desktop$ pip install apache-airflow==2.7.2
+admin1@ubuntu:~/Desktop$ airflow db init
+
+
