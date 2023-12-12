@@ -54,6 +54,8 @@ Input below mentioned yamal script in value.yaml file
 ### Install Apache Airflow Using Helm chart 
 Reference - https://hungngph.medium.com/airflow-on-kubernetes-with-helm-c795545325dc
 ```
+   46  helm repo add apache-airflow https://airflow.apache.org
+   47  helm repo update
    48  kubectl create namespace airflow && kubectl config set-context --current --namespace=airflow
    49  helm upgrade --install airflow apache-airflow/airflow --namespace airflow --f values.yaml 
    50  helm upgrade --install airflow apache-airflow/airflow --namespace airflow -f values.yaml
