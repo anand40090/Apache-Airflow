@@ -7,7 +7,7 @@ Apache Airflow™ is an open-source platform for developing, scheduling, and mon
 - https://airflow.apache.org/docs/apache-airflow/stable/index.html
 - https://www.devopsschool.com/blog/what-is-apache-airflow-and-use-cases-of-apache-airflow/
 
-# Metho-1 by using helm chart
+# Method-1 by using helm chart
 
 ### Required Tools 
 - Install python3
