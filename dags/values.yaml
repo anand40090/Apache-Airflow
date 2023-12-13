@@ -1,8 +1,0 @@
-scheduler:
-  extraVolumes:
-    - name: dags
-      hostPath:
-        path: /home/admin1/Airflow/Dag
-  extraVolumeMounts:
-    - name: dags
-      mountPath: /home/admin1/Airflow/Dag
